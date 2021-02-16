@@ -6,8 +6,8 @@ import exception.TicketsNotFound;
 public class TicketRepository {
 
     private Ticket[] items = {
-            new Ticket(1, 1000, "DME", "ZKD", 230),
-            new Ticket(2, 2000, "DME", "ZKD", 230),
+            new Ticket(1, 3000, "DME", "ZKD", 130),
+            new Ticket(2, 2000, "DME", "ZKD", 200),
             new Ticket(3, 4000, "OGZ", "FRU", 120),
             new Ticket(4, 6000, "GOJ", "LED", 360),
             new Ticket(5, 5000, "RVH", "FRU", 230),
