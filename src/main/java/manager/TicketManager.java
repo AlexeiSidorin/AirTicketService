@@ -1,7 +1,6 @@
 package manager;
 
 import domain.Ticket;
-import exception.TicketsNotFound;
 import repository.TicketRepository;
 
 import java.util.Arrays;
@@ -15,7 +14,8 @@ public class TicketManager {
         this.repository=repository;
     }
 
-    public Ticket[] findAll(String from, String to) throws TicketsNotFound {
+
+    public Ticket[] findAll(String from, String to) {
 
         Ticket[] result = new Ticket[0];
 
@@ -27,9 +27,7 @@ public class TicketManager {
                 tmp[tmp.length - 1] = ticket;
 
                 result = tmp;
-            } //else {
-              //  throw new TicketsNotFound("not found");
-            //}
+            }
         }
 
 
@@ -39,7 +37,7 @@ public class TicketManager {
         return result;
     }
 
-    public Ticket[] findAll(String from, String to, Comparator<Ticket> comparator) throws TicketsNotFound {
+    public Ticket[] findAllSortedByTime(String from, String to, Comparator<Ticket> comparator) {
 
         Ticket[] result = new Ticket[0];
 

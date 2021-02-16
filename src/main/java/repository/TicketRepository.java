@@ -1,7 +1,6 @@
 package repository;
 
 import domain.Ticket;
-import exception.TicketsNotFound;
 
 public class TicketRepository {
 
